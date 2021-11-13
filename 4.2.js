@@ -17,11 +17,11 @@
 // return an empty array (except in C return NULL) and be ready for anything else which is not
 // clearly specified ;)
 
-const Tribonacci = n =>{
-    let Tfib = [1 ,1, 1];
-    let a0 = 1;
-    let a1 = 1;
-    let a2 = 1
+const Tribonacci = (n,arr) =>{
+    let Tfib = arr;
+    let a0 = arr[0];
+    let a1 = arr[1];
+    let a2 = arr[2]
     for (i=3; i<n; i++){
         c = a0 + a1 +a2;
         a0 = a1;
@@ -32,4 +32,5 @@ const Tribonacci = n =>{
     return Tfib
 }
 
-console.log(Tribonacci(10));
+console.log(Tribonacci(10,[0,1,1]));
+console.log(Tribonacci(10,[1,1,1]));
